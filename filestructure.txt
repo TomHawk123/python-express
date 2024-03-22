@@ -1,0 +1,52 @@
+|── .github/                        # GitHub Actions CI/CD workflows
+│   └── workflows/
+│       └── tests.yml               # Python application workflow
+│       └── deploy.yml              # Deployment workflow
+├── app/                            # Main application package
+│   ├── __init__.py                 # Initializes Flask app and brings together other components
+│   ├── config.py                   # Configuration settings for different environments
+|   ├── logging_config.py           # Configuration for the application's logging (e.g.loggers, handlers, formatters, log levels)
+│   ├── database/                   # Database connection and management
+│   │   ├── __init__.py
+│   │   ├── connections.py           # Database connections setup
+│   │   └── models.py               # Database models
+│   │
+│   ├── middleware/                 # Middleware functionalities
+│   │   ├── __init__.py
+│   │   ├── error_handler.py        # Error handling middleware
+│   │   └── security.py             # Security headers and configurations
+│   │
+│   ├── routes/                     # Application routes
+│   │   ├── __init__.py
+│   │   ├── zones.py                # Routes for zones
+│   │   └── v2.py                   # V2 API routes
+│   │
+│   ├── services/                   # Business logic and service layer
+│   │   ├── __init__.py
+│   │   └── example_service.py      # Example service
+│   │
+│   └── static/                     # Static files
+│       └── ...                     # JS, CSS, images, etc.
+│
+├── logs/                           # Contains log files for the app
+│   ├── myapp.log
+├── tests/                          # Test suite
+│   ├── __init__.py
+│   └── test_example.py             # Example test
+│
+├── utils/                          # Utility scripts and helper functions
+│   ├── __init__.py
+│   └── dotenv_config.py            # Environment variable configuration
+│
+├── venv/                           # Virtual environment (ignored by git)
+│
+├── .dockerignore                   # Docker ignore file
+├── .env                            # Contains environment variables for production ENVIRONMENT
+├── .env.dev                        # Contains environment variables for development ENVIRONMENT
+├── .flaskenv                       # Flask environment variables
+├── .gitignore                      # Standard gitignore (venv, IDE files, etc.)
+├── app.py                          # Main application file
+├── Makefile                        # Contains scripts to run as aliases
+|── Dockerfile                      # Docker configuration
+├── pyproject.toml                  # Poetry package file (dependencies, project info)
+└── README.md                       # Project overview and setup instructions

@@ -1,0 +1,34 @@
+VERSION
+*.pyc
+*/*.pyc
+*/*/*.pyc
+README.md
+Changelog.md
+Makefile
+**/*.pyc
+**/*.pyo
+**/*.mo
+**/__pycache__/
+db.sqlite3
+**/*.md
+.env
+.env*
+#Ignore logs directory
+logs/
+
+#Ignore the git and cache folders
+.git
+.gitignore
+.cache
+
+#Ingore all markdown and class files
+*.md
+**/*.class
+
+That’s a pretty solid .gitignore file. But let’s say, for some reason, you work with .iso images (maybe you’re building your base images from them), and you accidentally leave that image in the build folder. Do that and the process will be considerably longer and the resultant image could grow quite a bit as well. To avoid that, let’s add ISO images to the .dockerignore file like so:
+
+#Ignore passwords file
+passwords.txt
+
+#Ignore ISO images
+*.iso
